@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="main.js" defer></script>
+    <title>Cadastro Produto</title>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Nunes Sport - Cadastro de Produtos</h1>
+    </header>
+    <main>
+        <button type="button" class="button blue mobile" id="cadastrarProduto">Cadastrar Produto</button>
+        <table id="tableProduto" class="records">
+            <thead>
+                <tr>
+                    <th>Nome do Produto</th>
+                    <th>Código</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aqui Vão os produtos -->
+                <!-- Feito com banco de dados em localStorage -->
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Produto</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="produto" data-index="new" class="modal-field" placeholder="Nome do Produto" required>
+                    <input type="number" id="codigoProduto" class="modal-field" placeholder="Codigo do Produto" required>
+                    <input type="text" id="descricaoProduto" class="modal-field" placeholder="Descrição do produto" required>
+                    <input type="text" id="valorProduto" class="modal-field" placeholder="Preço do produto" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
